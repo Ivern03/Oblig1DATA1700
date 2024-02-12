@@ -2,9 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblig1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 <body>
+<div class="bigContainer">
 
+    <form>
+        <h1>Bestilling av kinobiletter</h1>
+
+        <br>
+
+        <label for="filmvalg">Film: </label>
+        <select id="filmvalg" onchange="inputSjekkFilm(this.value)">
+            <option value="velgFilm">Velg film her</option>
+            <option value="Napoleon">Napoleon</option>
+            <option value="Oppenheimer">Oppenheimer</option>
+            <option value="Insidious">Insidious</option>
+            <option value="Creed">Creed</option>
+        </select>
+        <p id="feilmeldingFilm"></p>
+
+        <br>
+
+        <label for="antall">Antall: </label>
+        <input type="text" id="antall" onchange="inputSjekkAntall(this.value)">
+        <p id="feilmeldingAntall"></p>
+
+        <br>
+
+        <label for="fornavn">Fornavn: </label>
+        <input type="text" id="fornavn" onchange="inputSjekkFornavn(this.value)">
+        <p id="feilmeldingFornavn"></p>
+
+        <label for="etternavn">Etternavn: </label>
+        <input type="text" id="etternavn" onchange="inputSjekkEtternavn(this.value)">
+        <p id="feilmeldingEtternavn"></p>
+
+        <label for="telefonnr">Telefonnr: </label>
+        <input type="tel" id="telefonnr" onchange="inputSjekkTelefonnr(this.value)">
+        <p id="feilmeldingTlf"></p>
+
+        <label for="epost">Epost: </label>
+        <input type="email" id="epost" onchange="inputSjekkEmail(this.value)">
+        <p id="feilmeldingEpost"></p>
+
+    </form>
+
+    <button onclick="kjopBillett()">Kjøp Billett</button>
+
+    <h2>Alle billetter</h2>
+
+    <table id="utBilletter">
+
+        <thead>
+            <th>Film</th>
+            <th>Antall</th>
+            <th>Fornavn</th>
+            <th>Etternavn</th>
+            <th>Telefonnr</th>
+            <th>Epost</th>
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    <br>
+    <button onclick="slettBiletter()">Slett alle billettene</button>
+</div>
 </body>
 </html>

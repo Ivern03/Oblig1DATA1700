@@ -1,0 +1,49 @@
+body{
+    margin: auto;
+}
+
+.bigContainer {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgrey;
+}
+
+form {
+    text-align: left;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#antall{
+    width: 40px;
+}
+
+#feilmeldingFilm, #feilmeldingAntall, #feilmeldingFornavn, #feilmeldingEtternavn, #feilmeldingTlf, #feilmeldingEpost{
+    color: red;
+    font-weight: bold;
+}
+
+#tekstUt{
+    font-weight: bold;
+}
+
+#utBilletter{
+    visibility:hidden;
+}
