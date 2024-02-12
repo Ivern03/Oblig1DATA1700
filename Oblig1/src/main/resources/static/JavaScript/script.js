@@ -18,8 +18,8 @@ function inputSjekkAntall(antallSjekk){
         feilmeldingAntall.innerHTML = "Skriv inn et gyldig tall!";
     }else if(antallSjekk < 1){
         feilmeldingAntall.innerHTML = "Du må kjøpe minst 1 billett";
-    } else if (antallSjekk > 20) {
-        feilmeldingAntall.innerHTML = "Du kan ikke kjøpe flere enn 20 billetter";
+    } else if (antallSjekk > 50) {
+        feilmeldingAntall.innerHTML = "Du kan ikke kjøpe flere enn 50 billetter";
     }else{
         feilmeldingAntall.innerHTML =  '';
         return true;
@@ -106,7 +106,7 @@ function kjopBillett(){
 
     if(inputSjekkFilm(innFilm)){
         valgtFilm = innFilm;
-        feilmedingFilm.innerHTML = '';
+        feilmeldingFilm.innerHTML = '';
     }
 
     if(inputSjekkAntall(innAntall)){
